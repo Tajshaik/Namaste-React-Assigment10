@@ -1,0 +1,60 @@
+.header-container {
+  height: 50px;
+  background-color: #87ceeb;
+  border: 3px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  padding: 3px;
+  font-size: 15px;
+}
+
+.logo {
+  width: 100px;
+  height: 100%;
+}
+
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.Card-Container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.Card {
+  width: 250px;
+  background-color: beige;
+  margin: 20px;
+}
+
+.Card:hover {
+  border: 3px solid #000;
+}
+
+.image {
+  width: 95%;
+  padding: 5px;
+}
+
+.button-ctn {
+  padding: 5px;
+}
+
+.shimmer {
+  width: 250px;
+  height: 350px;
+  background-color: #d3d3d3;
+  margin: 20px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.28a392dc.css.map */
