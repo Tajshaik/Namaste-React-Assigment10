@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardComponent from "./CardComponent";
 import { API_URL, ResData, filterData } from "../Constants/ResData";
-import '../App.css';
+//import '../App.css';
 import Shimmer from "./ShimmerUI";
 import { Link } from "react-router-dom";
 
@@ -28,11 +28,11 @@ const BodyComponent =()=>{
 //One way is like u can do optinal chaing for not render component if there is no listofResturants.
 
     return (ListofRestaraunts?.length === 0)? (<Shimmer />) :(
-      <div className="Body-Conatiner">
-        <div className="button-ctn">
+      <div className="">
+        <div className="m-2 bg-purple-200">
           <button className="button" 
           onClick={()=>{
-           const FilterRestaraunts = NewRestaraunt.filter(
+           const FilterRestaraunts = NewRestaraunt.filter( 
               (Res) => Res.data.avgRating > 4
             )
             setNewRestaraunt(FilterRestaraunts);
@@ -41,18 +41,19 @@ const BodyComponent =()=>{
             Top Restaraunts
           </button>
         </div>
-        <div className="src-ctn">
-        <input className="imput-bar"
-        placeholder={search}
+        <div className="m-2 bg-purple-200">
+        <input className="bg-yellow-200"
+        placeholder="Search"
+        valu={search}
         onChange={(e)=>{
           setSearch(e.target.value)
         }} />
-        <button className="Search" onClick={()=>{
+        <button className="px-2 rounded-lg bg-blue-200" onClick={()=>{
            const data = filterData(search,NewRestaraunt);
            setNewRestaraunt(data);
         }}>Search</button>
         </div>
-      <div className="Card-Container">{
+      <div className="flex flex-wrap">{
         (!NewRestaraunt?.length) ? (<h3>No restaurants found</h3>) :
             (NewRestaraunt.map((ResList)=> {
               return(
